@@ -12,6 +12,7 @@
         background-image: radial-gradient(#3b82f6 0.65px, #e5e5f7 0.65px);
         background-size: 13px 13px;
         overflow-x: hidden;
+        user-select: none;
     }
     html {
         scroll-behavior: smooth;

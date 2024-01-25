@@ -12,10 +12,10 @@ const Contact = () => {
         <div>
           <img src={ContactImage} alt="ContactImage" className="w-64 my-8" />
         </div>
+        <h1 className="text-2xl font-bold text-blue-500 my-8">
+          Don't hesitate, Contact Me!
+        </h1>
         <Fade bottom>
-          <h1 className="text-2xl font-bold text-blue-500 my-8">
-            Don't hesitate, Contact Me!
-          </h1>
           <div className="bg-white rounded-lg p-4 m-4 flex justify-center items-center flex-wrap">
             <ContactBox
               href="mailto:alifuadabbas2@gmail.com"

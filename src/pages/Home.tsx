@@ -1,14 +1,11 @@
 import { TypeAnimation } from "react-type-animation"
 import { Fade } from 'react-reveal'
 
-import Nav from "../components/Nav"
-
 import { WaveImage } from "../assets"
 
 const Home = () => {
   return (
-    <div id="home" className="h-full">
-      <Nav />
+    <div id="home" className="h-full mt-12">
       <div className="flex flex-col justify-start items-center">
         
         <div className="w-72 h-72 my-4">

@@ -41,18 +41,22 @@ const Nav = () => {
           {isMenuOpen ? 'close' : 'menu' }
         </span>
         <ul className="flex justify-between items-center w-80 max-md:hidden">
-          <Menu />
+          <Menu 
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </ul>
       </div>
-      <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed top-16 left-0 w-full -z-10
+      <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10
       ${
         isMenuOpen && !isScrollingDown
-        ? "animate-[navMenuUp_500ms_linear_forwards]"
-        : "animate-[navMenuDown_500ms_linear_forwards]"
+        ? "animate-[navMenuDown_500ms_linear_forwards]"
+        : "animate-[navMenuUp_500ms_linear_forwards]"
       }
       `}>
         <ul className="flex flex-col justify-evenly items-center -z-10">
-          <Menu />
+          <Menu 
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </ul>
       </div>
     </div>

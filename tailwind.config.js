@@ -23,7 +23,7 @@ export default {
             top: '0'
           },
         },
-        navMenuUp: {
+        navMenuDown: {
           '0%': {
             top: '-200px'
           },
@@ -31,7 +31,7 @@ export default {
             top: '64px'
           },
         },
-        navMenuDown: {
+        navMenuUp: {
           '0%': {
             top: '64px'
           },

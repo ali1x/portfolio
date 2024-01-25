@@ -22,6 +22,22 @@ export default {
           '100%': {
             top: '0'
           },
+        },
+        navMenuUp: {
+          '0%': {
+            top: '-200px'
+          },
+          '100%': {
+            top: '64px'
+          },
+        },
+        navMenuDown: {
+          '0%': {
+            top: '64px'
+          },
+          '100%': {
+            top: '-200px'
+          },
         }
       }
     },

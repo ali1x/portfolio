@@ -46,11 +46,11 @@ const Nav = () => {
           />
         </ul>
       </div>
-      <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10
+      <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10 transition-all duration-500 ease-linear
       ${
         isMenuOpen && !isScrollingDown
-        ? "animate-[navMenuDown_500ms_linear_forwards]"
-        : "animate-[navMenuUp_500ms_linear_forwards]"
+        ? "translate-y-0"
+        : "-translate-y-64"
       }
       `}>
         <ul className="flex flex-col justify-evenly items-center -z-10">

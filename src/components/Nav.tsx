@@ -25,10 +25,10 @@ const Nav = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] ${
+      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] transition-all duration-200 ease-linear ${
         isScrollingDown
-          ? "animate-[navUp_200ms_linear_forwards]"
-          : "animate-[navDown_200ms_linear_forwards]"
+          ? "-translate-y-16"
+          : "translate-y-0"
       }
       `}
     >
@@ -49,7 +49,7 @@ const Nav = () => {
       <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10 transition-all duration-500 ease-linear
       ${
         isMenuOpen && !isScrollingDown
-        ? "translate-y-0"
+        ? "-translate-y-1"
         : "-translate-y-64"
       }
       `}>

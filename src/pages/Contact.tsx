@@ -33,7 +33,7 @@ const Contact = () => {
               name="Telegram"
             />
             <ContactBox
-              href="https://alidev.eu.org/Ali_F._Abbas_Resume.pdf"
+              href="/Ali_F._Abbas_Resume.pdf"
               iconName="download"
               name="Take a look at my résumé"
             />

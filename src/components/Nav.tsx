@@ -43,7 +43,7 @@ const Nav = (props: {
             {isMenuOpen ? "close" : "menu"}
           </span>
           <span
-            className="dark:text-dark-four material-symbols-outlined cursor-pointer md:hidden"
+            className="dark:text-dark-four text-blue-500 material-symbols-outlined cursor-pointer md:hidden"
             onClick={() => props.setIsModeDark((prev) => !prev)}
           >
             {props.isModeDark ? "dark_mode" : "light_mode"}

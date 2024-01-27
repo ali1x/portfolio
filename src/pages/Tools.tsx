@@ -6,13 +6,13 @@ import { ToolsImage, WaveImage } from "../assets"
 
 const Tools = () => {
   return (
-    <div className="flex flex-col justify-center items-center" id="tools">
+    <div className="flex flex-col justify-center items-center dark:bg-dark-one" id="tools">
       <img src={WaveImage} alt="WaveImage" className="w-full rotate-180" />
       <img src={ToolsImage} alt="tools" className="w-64 my-8" />
       <Fade bottom>
-        <h1 className="mt-8 text-2xl font-bold text-blue-500">My Tools</h1>
+        <h1 className="my-8 text-2xl font-bold text-blue-500">My Tools</h1>
         <div className="w-full flex flex-col justify-evenly items-center md:flex-row">
-          <div className="rounded-3xl bg-blue-500 my-8 flex flex-col justify-start items-center">
+          <div className="rounded-3xl bg-blue-500 mb-8 flex flex-col justify-start items-center">
             <h1 className="text-white mt-4">Languages & Tools</h1>
             <div className="w-full text-white flex justify-center items-center">
               <ul className="mx-2">
@@ -33,7 +33,7 @@ const Tools = () => {
               </ul>
             </div>
           </div>
-          <div className="rounded-3xl bg-blue-500 my-8 flex flex-col justify-start items-center">
+          <div className="rounded-3xl bg-blue-500 mb-8 flex flex-col justify-start items-center">
             <h1 className="text-white mt-4">Libraries</h1>
             <div className="w-full text-white flex justify-center items-center">
               <ul className="mx-2">
@@ -75,6 +75,7 @@ const Tools = () => {
           </div>
         </div>
       </Fade>
+      <img src={WaveImage} alt="WaveImage" className="w-full" />
     </div>
   )
 }

@@ -6,9 +6,9 @@ import { WaveImage, ContactImage } from "../assets"
 
 const Contact = () => {
   return (
-    <div id="contact">
+    <div id="contact" className="dark:bg-dark-one">
       <img src={WaveImage} alt="WaveImage" className="rotate-180 w-full" />
-      <div className="flex flex-col justify-center items-center my-4">
+      <div className="flex flex-col justify-center items-center mt-4">
         <div>
           <img src={ContactImage} alt="ContactImage" className="w-64 my-8" />
         </div>
@@ -16,7 +16,7 @@ const Contact = () => {
           Don't hesitate, Contact Me!
         </h1>
         <Fade bottom>
-          <div className="bg-white rounded-lg p-4 m-4 flex justify-center items-center flex-wrap">
+          <div className="bg-white dark:bg-dark-one rounded-lg p-4 m-4 flex justify-center items-center flex-wrap">
             <ContactBox
               href="mailto:alifuadabbas2@gmail.com"
               iconName="mail"

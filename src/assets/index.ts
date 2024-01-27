@@ -9,5 +9,5 @@ export {
     WaveImage,
     AboutImage,
     ContactImage,
-    ToolsImage
+    ToolsImage,
 }

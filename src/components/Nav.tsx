@@ -2,7 +2,10 @@ import { useState, useEffect } from "react"
 
 import Menu from "./Menu"
 
-const Nav = () => {
+const Nav = (props: {
+  isModeDark: boolean
+  setIsModeDark: React.Dispatch<React.SetStateAction<boolean>>
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [prevScroll, setPrevScroll] = useState(window.scrollY)
   const [isScrollingDown, setIsScrollingDown] = useState(false)
@@ -25,38 +28,44 @@ const Nav = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] transition-all duration-200 ease-linear ${
-        isScrollingDown
-          ? "-translate-y-16"
-          : "translate-y-0"
+      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] dark:bg-dark-one transition-all duration-200 ease-linear ${
+        isScrollingDown ? "-translate-y-16" : "translate-y-0"
       }
       `}
     >
       <div className="h-full flex justify-between items-center mx-6">
         <code className="md:text-2xl text-xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 inline-block text-transparent bg-clip-text">{`<Ali F. Abbas />`}</code>
-        <span
-          className="material-symbols-outlined text-blue-500 cursor-pointer md:hidden"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? 'close' : 'menu' }
-        </span>
-        <ul className="flex justify-between items-center w-80 max-md:hidden">
-          <Menu 
-            setIsMenuOpen={setIsMenuOpen}
-          />
+        <div className="flex justify-between items-center">
+          <span
+            className="material-symbols-outlined text-blue-500 cursor-pointer mr-4 md:hidden"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? "close" : "menu"}
+          </span>
+          <span
+            className="dark:text-dark-four material-symbols-outlined cursor-pointer md:hidden"
+            onClick={() => props.setIsModeDark((prev) => !prev)}
+          >
+            {props.isModeDark ? "dark_mode" : "light_mode"}
+          </span>
+        </div>
+        <ul className="flex justify-between items-center w-96 max-md:hidden mr-10">
+          <Menu setIsMenuOpen={setIsMenuOpen} />
+          <span
+            className="material-symbols-outlined cursor-pointer text-blue-500 dark:text-dark-four"
+            onClick={() => props.setIsModeDark((prev) => !prev)}
+          >
+            {props.isModeDark ? "dark_mode" : "light_mode"}
+          </span>
         </ul>
       </div>
-      <div className={`bg-[#e5e5f7] shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10 transition-all duration-500 ease-linear
-      ${
-        isMenuOpen && !isScrollingDown
-        ? "-translate-y-1"
-        : "-translate-y-64"
-      }
-      `}>
+      <div
+        className={`bg-[#e5e5f7]/80 dark:bg-dark-one/80 shadow-lg pb-2 md:hidden fixed left-0 w-full -z-10 transition-all duration-300 ease-linear
+      ${isMenuOpen && !isScrollingDown ? "-translate-y-1" : "-translate-y-64"}
+      `}
+      >
         <ul className="flex flex-col justify-evenly items-center -z-10">
-          <Menu 
-            setIsMenuOpen={setIsMenuOpen}
-          />
+          <Menu setIsMenuOpen={setIsMenuOpen} />
         </ul>
       </div>
     </div>

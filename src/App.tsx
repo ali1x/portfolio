@@ -8,11 +8,12 @@ import Portfolio from "./pages/Portfolio"
 import Tools from "./pages/Tools"
 
 const App = () => {
-  const [isModeDark, setIsModeDark] = useState<boolean>(localStorage.theme === "dark")
+  const [isModeDark, setIsModeDark] = useState<boolean>(
+    localStorage.theme === "dark"
+  )
 
   useEffect(() => {
-
-    isModeDark ? localStorage.theme = "dark" : localStorage.theme = ""
+    isModeDark ? (localStorage.theme = "dark") : (localStorage.theme = "")
 
     if (
       localStorage.theme === "dark" ||
@@ -28,8 +29,8 @@ const App = () => {
   return (
     <>
       <Nav 
-        isModeDark = {isModeDark}
-        setIsModeDark = {setIsModeDark}
+        isModeDark={isModeDark} 
+        setIsModeDark={setIsModeDark} 
       />
       <Home />
       <About />

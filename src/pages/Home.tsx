@@ -11,7 +11,7 @@ const Home = () => {
           <img
             src={ProfileImage}
             alt="ProfileImage"
-            className="rounded-full border-8 border-blue-500 dark:border-dark-four mt-5"
+            className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[300px] h-[300px]"
           />
         </div>
         <Fade bottom>

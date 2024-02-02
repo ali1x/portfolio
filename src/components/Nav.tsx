@@ -28,7 +28,7 @@ const Nav = (props: {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] dark:bg-dark-one transition-all duration-200 ease-linear ${
+      className={`fixed top-0 left-0 h-16 w-full z-20 shadow-lg bg-[#e5e5f7] dark:border-b-[1px] dark:border-dark-four dark:bg-dark-one transition-all duration-200 ease-linear ${
         isScrollingDown ? "-translate-y-16" : "translate-y-0"
       }
       `}

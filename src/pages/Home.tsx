@@ -5,13 +5,13 @@ import { WaveImage, ProfileImage } from "../assets"
 
 const Home = () => {
   return (
-    <div id="home" className="h-full mt-12 dark:bg-dark-one">
+    <div id="home" className="h-full mt-12">
       <div className="flex flex-col justify-start items-center">
         <div className="w-72 h-72 my-4">
           <img
             src={ProfileImage}
             alt="ProfileImage"
-            className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[300px] h-[300px]"
+            className="rounded-full border-4 border-blue-500 dark:border-dark-four mt-5 blob w-[300px] h-[300px]"
           />
         </div>
         <Fade bottom>

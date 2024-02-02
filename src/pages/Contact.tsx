@@ -4,7 +4,7 @@ import { WaveImage, ContactImage } from "../assets"
 
 const Contact = () => {
   return (
-    <div id="contact" className="dark:bg-dark-one">
+    <div id="contact">
       <img src={WaveImage} alt="WaveImage" className="rotate-180 w-full" />
       <div className="flex flex-col justify-center items-center mt-4">
         <div>

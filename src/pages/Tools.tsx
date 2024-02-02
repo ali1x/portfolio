@@ -6,7 +6,7 @@ import { ToolsImage, WaveImage } from "../assets"
 
 const Tools = () => {
   return (
-    <div className="flex flex-col justify-center items-center dark:bg-dark-one" id="tools">
+    <div className="flex flex-col justify-center items-center" id="tools">
       <img src={WaveImage} alt="WaveImage" className="w-full rotate-180" />
       <img src={ToolsImage} alt="tools" className="w-64 my-8" />
       <Fade bottom>

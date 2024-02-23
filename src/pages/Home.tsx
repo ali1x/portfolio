@@ -10,7 +10,7 @@ const Home = () => {
           <img
             src={ProfileImage}
             alt="ProfileImage"
-            className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[250px] h-[250px]"
+            className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]"
           />
         </div>
         <div className="lg:ml-32">
@@ -27,7 +27,7 @@ const Home = () => {
               wrapper="h1"
               speed={50}
               repeat={Infinity}
-              className="text-xl md:text-2xl lg:text-4xl font-bold my-8 text-blue-500 dark:text-dark-four"
+              className="text-xl md:text-2xl lg:text-3xl font-bold my-8 text-blue-500 dark:text-dark-four"
             />
           </div>
           <div className="flex flex-col lg:items-start lg:text-xl justify-center items-center dark:text-dark-four">

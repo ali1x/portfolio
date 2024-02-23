@@ -1,40 +1,41 @@
 import { TypeAnimation } from "react-type-animation"
-import { Fade } from "react-reveal"
 
 import { WaveImage, ProfileImage } from "../assets"
 
 const Home = () => {
   return (
     <div id="home" className="h-full mt-12">
-      <div className="flex flex-col justify-start items-center">
-        <div className="w-72 h-72 my-4">
+      <div className="flex flex-col lg:flex-row-reverse lg:justify-between justify-start items-center lg:my-32">
+        <div className="w-72 h-72 my-4 flex justify-center items-center lg:mr-32">
           <img
             src={ProfileImage}
             alt="ProfileImage"
-            className="rounded-full border-4 border-blue-500 dark:border-dark-four mt-5 blob w-[300px] h-[300px]"
+            className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[250px] h-[250px]"
           />
         </div>
-        <Fade bottom>
-          <TypeAnimation
-            sequence={[
-              "A Front-End React Developer",
-              1000,
-              "A Front-End Web Developer",
-              1000,
-              "A Front-End Software Engineer",
-              1000,
-            ]}
-            wrapper="h1"
-            speed={50}
-            repeat={Infinity}
-            className="text-xl md:text-2xl font-bold my-8 text-blue-500 dark:text-dark-four"
-          />
-          <div className="flex flex-col justify-center items-center dark:text-dark-four">
+        <div className="lg:ml-32">
+          <div>
+            <TypeAnimation
+              sequence={[
+                "A Front-End React Developer",
+                1000,
+                "A Front-End Web Developer",
+                1000,
+                "A Front-End Software Engineer",
+                1000,
+              ]}
+              wrapper="h1"
+              speed={50}
+              repeat={Infinity}
+              className="text-xl md:text-2xl lg:text-4xl font-bold my-8 text-blue-500 dark:text-dark-four"
+            />
+          </div>
+          <div className="flex flex-col lg:items-start lg:text-xl justify-center items-center dark:text-dark-four">
             <p>Greetings, I'm Ali F. Abbas.</p>
             <p>A passionate Front-end React Developer</p>
             <p>from Syria 📍</p>
           </div>
-          <div className="w-full flex justify-center items-center mb-4">
+          <div className="w-full flex lg:justify-start lg:mt-4 justify-center items-center mb-4">
             <a
               href="https://www.instagram.com/ali_f._abbas"
               target="_blank"
@@ -78,7 +79,7 @@ const Home = () => {
               </svg>
             </a>
           </div>
-        </Fade>
+        </div>
       </div>
 
       <img src={WaveImage} alt="WaveImage" className="w-full" />

@@ -10,8 +10,9 @@ type ContactBoxProps = {
 const ContactBox = (props: ContactBoxProps) => {
   return (
     <motion.a
-      initial={{opacity: 0 }}
-      whileInView={{opacity: 1, transition: { duration: props.time } }}
+      viewport={{ once: true }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: props.time } }}
       href={props.href}
       target="_blank"
       rel="noopener noreferrer"

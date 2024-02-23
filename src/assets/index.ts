@@ -4,6 +4,8 @@ import ContactImage from './contact.svg'
 import ToolsImage from './tools.svg'
 import ProfileImage from './profile.jpg'
 import PortfolioImg from './portfolio.svg'
+import Espace from './espace.png'
+import Hoobank from './hoobank.png'
 
 export {
     WaveImage,
@@ -11,5 +13,7 @@ export {
     ContactImage,
     ToolsImage,
     ProfileImage,
-    PortfolioImg
+    PortfolioImg,
+    Espace,
+    Hoobank
 }

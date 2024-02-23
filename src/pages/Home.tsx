@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 
 import { WaveImage, ProfileImage } from "../assets"
@@ -6,14 +7,24 @@ const Home = () => {
   return (
     <div id="home" className="h-full mt-12">
       <div className="flex flex-col lg:flex-row-reverse lg:justify-between justify-start items-center lg:my-32">
-        <div className="w-72 h-72 my-4 flex justify-center items-center lg:mr-32">
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+          className="w-72 h-72 my-4 flex justify-center items-center lg:mr-32"
+        >
           <img
             src={ProfileImage}
             alt="ProfileImage"
             className="rounded-full border-4 border-black dark:border-dark-four mt-5 blob w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]"
           />
-        </div>
-        <div className="lg:ml-32">
+        </motion.div>
+        <motion.div
+          viewport={{ once: true }}
+          className="lg:ml-32"
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+        >
           <div>
             <TypeAnimation
               sequence={[
@@ -79,10 +90,10 @@ const Home = () => {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <img src={WaveImage} alt="WaveImage" className="w-full" />
+      <img src={WaveImage} alt="WaveImage" className="w-full -mb-1" />
     </div>
   )
 }

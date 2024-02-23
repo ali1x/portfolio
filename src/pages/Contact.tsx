@@ -5,7 +5,11 @@ import { WaveImage, ContactImage } from "../assets"
 const Contact = () => {
   return (
     <div id="contact">
-      <img src={WaveImage} alt="WaveImage" className="rotate-180 w-full" />
+      <img
+        src={WaveImage}
+        alt="WaveImage"
+        className="rotate-180 w-full -mt-1"
+      />
       <div className="flex flex-col justify-center items-center mt-4">
         <div>
           <img src={ContactImage} alt="ContactImage" className="w-64 my-8" />
@@ -18,21 +22,25 @@ const Contact = () => {
             href="mailto:alifuadabbas2@gmail.com"
             iconName="mail"
             name="alifuadabbas2@gmail.com"
+            time={1}
           />
           <ContactBox
             href="tel:00963997231105"
             iconName="call"
             name="+963-997-231-105"
+            time={1.5}
           />
           <ContactBox
             href="https://t.me/devaliabbas"
             iconName="send"
             name="Telegram"
+            time={2}
           />
           <ContactBox
             href="/Ali_F._Abbas_Resume.pdf"
             iconName="download"
             name="Take a look at my résumé"
+            time={2.5}
           />
         </div>
       </div>

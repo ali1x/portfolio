@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import { AboutImage } from "../assets"
 
 const About = () => {
@@ -6,8 +8,20 @@ const About = () => {
       className="bg-blue-500 flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:py-16"
       id="about"
     >
-      <img src={AboutImage} alt="AboutImage" className="w-64 mt-4 lg:ml-32 lg:w-80" />
-      <div className="flex flex-col justify-center items-center lg:mr-32">
+      <motion.img
+        viewport={{ once: true }}
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+        src={AboutImage}
+        alt="AboutImage"
+        className="w-64 mt-4 lg:ml-32 lg:w-80"
+      />
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+        className="flex flex-col justify-center items-center lg:mr-32"
+      >
         <h1 className="mb-4 mt-8 text-white text-2xl font-bold">About Me</h1>
         <h2 className="text-white font-bold text-sm md:text-lg">
           A Front-end React Developer from Syria 📍
@@ -36,7 +50,7 @@ const About = () => {
             Email Me
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

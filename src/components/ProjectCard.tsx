@@ -14,19 +14,20 @@ const ProjectCard = (props: ProjectCardProps) => {
       viewport={{ once: true }}
       initial={{ y: 200, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
-      className="bg-white rounded-2xl flex flex-col justify-center items-center p-4 m-4"
+      whileHover={{ y: 10, transition: { duration: 0.2 } }}
+      className="bg-white rounded-2xl flex flex-col justify-center items-center p-4 m-4 cursor-pointer"
     >
       <img
         src={props.img}
         alt="project"
-        className="w-72 rounded-2xl border-[12px] border-blue-500 my-2"
+        className="w-72 rounded-2xl border-blue-500 my-2"
       />
       <h1 className="font-bold text-2xl my-2">{props.name}</h1>
       <a
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-500 font-bold text-lg my-2"
+        className="text-blue-500 hover:text-green-500 font-bold text-lg my-2"
       >
         Live Demo
       </a>
